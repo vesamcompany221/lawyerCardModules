@@ -8,7 +8,7 @@ import com.vesam.barexamlibrary.utils.build_config.BuildConfig.Companion.BASE_UR
 import com.vesam.barexamlibrary.utils.build_config.BuildConfig.Companion.USER_API_TOKEN_VALUE
 import com.vesam.barexamlibrary.utils.build_config.BuildConfig.Companion.USER_UUID_VALUE
 
-class Option{
+class InitOption{
 
     companion object{
         @JvmStatic
