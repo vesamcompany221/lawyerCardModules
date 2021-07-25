@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main.xml"
+    app:startDestination="@id/categoryFragment">
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.vesam.barexamlibrary.ui.view.fragment.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.vesam.barexamlibrary.ui.view.fragment.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.vesam.barexamlibrary.ui.view.fragment.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/startTestFragment"
+        android:name="com.vesam.barexamlibrary.ui.view.fragment.StartTestFragment"
+        android:label="fragment_start_test"
+        tools:layout="@layout/fragment_start_test" />
+    <fragment
+        android:id="@+id/examFragment"
+        android:name="com.vesam.barexamlibrary.ui.view.fragment.ExamFragment"
+        android:label="fragment_exam"
+        tools:layout="@layout/fragment_exam" />
+    <fragment
+        android:id="@+id/quizDetailsFragment"
+        android:name="com.vesam.barexamlibrary.ui.view.fragment.QuizDetailsFragment"
+        android:label="fragment_quiz_details"
+        tools:layout="@layout/fragment_quiz_details" />
+    <fragment
+        android:id="@+id/resultQuizFragment"
+        android:name="com.vesam.barexamlibrary.ui.view.fragment.ResultQuizFragment"
+        android:label="fragment_result_quiz"
+        tools:layout="@layout/fragment_result_quiz" />
+
+</navigation>

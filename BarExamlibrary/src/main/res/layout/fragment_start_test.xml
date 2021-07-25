@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.view.fragment.PaymentFragment">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@id/pagerSlider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_slider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_52"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@id/lnDots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/pagerSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/rounded_white_shape_32"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_16"
+        app:layout_constraintBottom_toTopOf="@+id/lnPayment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lnDots"
+        app:layout_constraintVertical_bias="0.0">
+
+        <View
+            android:layout_width="@dimen/margin_1"
+            android:layout_height="@dimen/margin_8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iransansmobile"
+            android:gravity="center_vertical"
+            android:text="عنوان آزمون وکاالت"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="@dimen/margin_1"
+            android:layout_height="@dimen/margin_4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iransansmobile"
+            android:gravity="center_vertical"
+            android:text="دسته بندی آزمون"
+            android:textColor="@color/secondary_text_two"
+            android:textSize="@dimen/text_size_12" />
+
+        <View
+            android:layout_width="@dimen/margin_1"
+            android:layout_height="@dimen/margin_16" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iransansmobile"
+                android:gravity="center_vertical"
+                android:text="شاکی پرونده در گفت‌وگو با خبرگزاری تسنیم اظهار داشت: «پرونده در هیئت تخصصی
+ دیوان مطرح شد و قضات هیئت تخصصی به این نتیجه می‌رسند که آیین‌نامه مورد
+ شکایت ما منسوخ شده و در سال ۸۸ توسط رئیس قوه قضائیه اصلاح شده و مدت
+زمان توقف اجرای آن نیز به پایان رسیده است؛ بر این اساس موضوع را به رئیس
+ دیوان عدالت اداری گزارش می‌کنند و در هایت طبق قراری که صادر شده، چون
+آیین‌نامه سال ۳۴ منسوخ و آیین‌نامه سال ۸۸ لازم‌الاجرا شده، کانون‌های وکلا باید
+براساس آیین‌نامه جدید هم آزمون برگزار و هم از مفاد آن تبعیت کنند. نکته بعدی
+اینکه آزمون امسال یک‌مرحله‌ای است در صورتی که طبق آیین‌نامه سال ۸۸ باید
+ آزمون دو مرحله و به‌صورت کتبی و شفاهی باشد"
+                android:textColor="@color/secondary_text_two"
+                android:textSize="@dimen/text_size_12" />
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnStartTest"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_53"
+        android:background="@color/accent_two"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="شروع آزمون"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

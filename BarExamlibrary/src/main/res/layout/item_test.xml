@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_8"
+    android:layout_marginBottom="@dimen/margin_8"
+    android:gravity="center_vertical|end"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@id/lnParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_item"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/margin_8">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_4"
+                android:layout_weight="1"
+                android:gravity="end|top"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@id/txtTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/iransansmobile"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    tools:text="دعوی خانوادگی" />
+
+                <View
+                    android:layout_width="@dimen/margin_1"
+                    android:layout_height="@dimen/margin_4" />
+
+                <TextView
+                    android:id="@id/txtDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/iransansmobile"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/secondary_text_two"
+                    android:textSize="@dimen/text_size_12"
+                    tools:text="حقوق و جزا" />
+
+                <View
+                    android:layout_width="@dimen/margin_1"
+                    android:layout_height="@dimen/margin_8" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@id/txtMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:fontFamily="@font/iransansmobile"
+                        android:textColor="@color/accent_two"
+                        android:textSize="@dimen/text_size_12"
+                        app:drawableEndCompat="@drawable/ic_coins"
+                        tools:text="65000 تومان" />
+
+                    <View
+                        android:layout_width="@dimen/margin_24"
+                        android:layout_height="@dimen/margin_1" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@id/txtQuestionCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/margin_6"
+                        android:fontFamily="@font/iransansmobile"
+                        android:textColor="@color/accent_two"
+                        android:textSize="@dimen/text_size_12"
+                        app:drawableEndCompat="@drawable/ic_information"
+                        tools:text="35 سوال" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/margin_12"
+                android:layout_height="@dimen/margin_1" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@id/image"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                android:layout_width="@dimen/margin_84"
+                android:layout_height="@dimen/margin_84"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

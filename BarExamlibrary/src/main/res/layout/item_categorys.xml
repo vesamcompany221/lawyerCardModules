@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_69"
+    android:layout_marginTop="@dimen/margin_8"
+    android:layout_marginBottom="@dimen/margin_8"
+    android:gravity="center_vertical|end"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@id/lnParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ripple_item"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_8">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            app:srcCompat="@drawable/ic_arrow_back"
+            app:tint="@color/black" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_1"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iransansmobile"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14"
+            tools:text="حقوق و جزا" />
+
+        <View
+            android:layout_width="@dimen/margin_16"
+            android:layout_height="@dimen/margin_1" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@id/image"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+            android:scaleType="centerCrop"
+            android:layout_width="@dimen/margin_52"
+            android:layout_height="@dimen/margin_52" />
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

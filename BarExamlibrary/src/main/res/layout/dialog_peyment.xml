@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_gray_f7f7f7">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_5"
+            android:fontFamily="@font/yekan"
+            android:gravity="center"
+            android:padding="@dimen/margin_5"
+            android:text="نوع پرداخت"
+            android:textColor="@color/gray_434343"
+            android:textSize="@dimen/text_size_22" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_8"
+            android:weightSum="1">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CvPay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_5"
+                android:layout_weight="0.5"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:id="@+id/llPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/imgpay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:paddingTop="@dimen/margin_5"
+                        android:src="@drawable/ic_money_pay" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_8"
+                        android:text="پرداخت آنلاین"
+                        android:textColor="@color/gray_767676" />
+
+                </LinearLayout>
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/avlPay"
+                    style="@style/AVLoadingIndicatorView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    app:indicatorColor="@color/colorPrimary"
+                    app:indicatorName="BallPulseIndicator" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CvWallet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_5"
+                android:layout_weight="0.5"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:id="@+id/llWallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgwallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:paddingTop="@dimen/margin_5"
+                        android:src="@drawable/ic_wallet_pay" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_8"
+                        android:text="کیف پول"
+                        android:textColor="@color/gray_767676" />
+
+                </LinearLayout>
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/avlWallet"
+                    style="@style/AVLoadingIndicatorView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    app:indicatorColor="@color/colorPrimary"
+                    app:indicatorName="BallPulseIndicator" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

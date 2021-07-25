@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_3"
+    tools:context=".ui.view.fragment.ResultQuizFragment">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_16"
+        android:background="@drawable/rounded_white_shape_16">
+
+        <LinearLayout
+            android:id="@id/lnParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_16"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="@dimen/margin_28" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.vesam.barexamlibrary.utils.custom_view.circle_progress.CircleProgressBar
+                    android:id="@id/progressBarPercentToPassed"
+                    android:layout_width="@dimen/margin_150"
+                    android:layout_height="@dimen/margin_150"
+                    app:max="100"
+                    app:progressCount="0"
+                    app:progressBarThickness="4dp"
+                    app:progressbarColor="@color/color_green"/>
+
+                <TextView
+                    android:id="@id/txtPercentToPassed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra_7"
+                    android:textColor="@color/color_green"
+                    android:textSize="@dimen/text_size_38"
+                    android:textStyle="bold"
+                    tools:text="%75" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="@dimen/margin_21" />
+
+            <TextView
+                android:id="@id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="@dimen/negative_line_spacing_extra_2"
+                android:textColor="@color/accent_two"
+                android:textSize="@dimen/text_size_24"
+                android:textStyle="bold"
+                tools:ignore="UnusedAttribute"
+                tools:text="شما در این آزمون پذیرفته شده اید" />
+
+            <View
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="@dimen/margin_14" />
+
+            <TextView
+                android:id="@id/txtGiftDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="@dimen/line_spacing_extra_9_8"
+                android:textColor="@color/secondary_text_three"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                tools:ignore="UnusedAttribute"
+                tools:text="شاکی پرونده در گفت‌وگو با خبرگزاری تسنیم اظهار داشت: «پرونده در هیئت تخصصی
+ دیوان مطرح شد و قضات هیئت تخصصی به این نتیجه می‌رسند که آیین‌نامه مورد
+ شکایت ما منسوخ شده و در سال ۸۸ توسط رئیس قوه قضائیه اصلاح شده و مدت
+زمان توقف اجرای آن نیز به پایان رسیده است؛ بر این اساس موضوع را به رئیس
+ . دیوان عدالت اداری گزارش می‌کنند " />
+
+            <View
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="@dimen/margin_32" />
+
+            <LinearLayout
+                android:id="@id/lnGiftChargeWallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_round_wallet"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/margin_16"
+                android:paddingEnd="@dimen/margin_16">
+
+                <TextView
+                    android:id="@id/txtGiftChargeWallet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra_7_8"
+                    android:fontFamily="@font/damavand_extra_bold"
+                    android:textColor="@color/color_gift_charge_wallet"
+                    android:textSize="@dimen/text_size_20"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_wallet" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/margin_0"
+                android:layout_height="@dimen/margin_23" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@id/btnReturn"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_65"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra_3_8"
+                    android:text="@string/returns"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_red"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/white"
+                    app:strokeColor="@color/color_red"
+                    app:strokeWidth="@dimen/margin_1"
+                    app:cornerRadius="@dimen/margin_15"
+                    app:rippleColor="@color/primary_dark" />
+
+                <View
+                    android:layout_width="@dimen/margin_23"
+                    android:layout_height="@dimen/margin_0" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@id/btnRetry"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_65"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra_3_8"
+                    android:text="@string/retry"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/color_green"
+                    app:cornerRadius="@dimen/margin_15"
+                    app:rippleColor="@color/primary_dark" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</LinearLayout>

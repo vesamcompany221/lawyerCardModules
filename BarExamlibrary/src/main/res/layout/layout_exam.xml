@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_white_shape_16"
+    android:fillViewport="true">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@id/lnParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_16"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@id/lnText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_round_text_quiz"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@id/txtTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_12"
+                    android:layout_marginTop="@dimen/margin_55"
+                    android:layout_marginEnd="@dimen/margin_12"
+                    android:layout_marginBottom="@dimen/margin_55"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra_9"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold"
+                    tools:text=" بلوکه کردن بخشی از تسهیلات اعطایی
+ به مشتری ممنوع است ؟" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/lnImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_round_text_quiz"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:layout_marginBottom="@dimen/margin_32">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@id/image"
+                        android:layout_width="@dimen/layout_width_image_quiz"
+                        android:layout_height="@dimen/layout_height_image_quiz"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
+                    <ImageButton
+                        android:id="@id/imgBtnFullScreen"
+                        android:layout_width="@dimen/margin_56"
+                        android:layout_height="@dimen/margin_56"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:layout_constraintBottom_toBottomOf="@+id/image"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_fullscreen" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@id/lnVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_round_text_quiz"
+                android:visibility="gone">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@id/rVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:layout_marginBottom="@dimen/margin_32"
+                    android:outlineProvider="background"
+                    tools:ignore="UnusedAttribute">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/layout_width_video_quiz"
+                        android:layout_height="@dimen/layout_height_video_quiz"
+                        android:background="@drawable/rounded_video_background"
+                        android:outlineProvider="background"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="UnusedAttribute">
+
+                        <VideoView
+                            android:id="@id/video"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterButton
+                        android:id="@id/imgBtnVideoFullScreen"
+                        android:layout_width="@dimen/margin_52"
+                        android:layout_height="@dimen/margin_52"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:srcCompat="@drawable/ic_fullscreen"
+                        app:tint="@color/white" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@id/imgPlay"
+                        android:layout_width="@dimen/margin_52"
+                        android:layout_height="@dimen/margin_52"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_play_circle_outline"
+                        app:tint="@color/white" />
+
+                    <LinearLayout
+                        android:id="@id/lnController"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_controller_video_background"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/margin_13"
+                        android:paddingTop="@dimen/margin_4"
+                        android:paddingEnd="@dimen/margin_13"
+                        android:paddingBottom="@dimen/margin_4"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0">
+
+                        <androidx.constraintlayout.utils.widget.ImageFilterButton
+                            android:id="@id/imgPause"
+                            android:layout_width="@dimen/margin_15"
+                            android:layout_height="@dimen/margin_15"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_pause"
+                            app:tint="@color/white" />
+
+                        <View
+                            android:layout_width="@dimen/margin_8"
+                            android:layout_height="@dimen/margin_1" />
+
+                        <TextView
+                            android:id="@id/txtStartTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra_3"
+                            android:textColor="@color/color_green_x1"
+                            android:textSize="@dimen/text_size_10"
+                            android:textStyle="normal"
+                            tools:text="00 : 15" />
+
+                        <View
+                            android:layout_width="@dimen/margin_8"
+                            android:layout_height="@dimen/margin_1" />
+
+                        <SeekBar
+                            android:id="@id/seekBarTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <View
+                            android:layout_width="@dimen/margin_8"
+                            android:layout_height="@dimen/margin_1" />
+
+                        <TextView
+                            android:id="@id/txtEndTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:letterSpacing="-0.02"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra_3"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_10"
+                            android:textStyle="normal"
+                            tools:text="00 : 15" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@id/progressBarVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:indicatorColor="@color/color_progress"
+                    app:indicatorName="BallPulseIndicator" />
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <LinearLayout
+                android:id="@id/lnSound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_round_text_quiz"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@id/imgPlaySound"
+                    android:layout_width="@dimen/margin_50"
+                    android:layout_height="@dimen/margin_50"
+                    android:layout_marginTop="@dimen/margin_40"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_play_circle"
+                    app:tint="@color/accent_two" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@id/imgPauseSound"
+                    android:layout_width="@dimen/margin_50"
+                    android:layout_height="@dimen/margin_50"
+                    android:layout_marginTop="@dimen/margin_40"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_pause_circle"
+                    app:tint="@color/accent_two" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/margin_60"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@id/txtStartTimeSound"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:letterSpacing="-0.03"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra_9_8"
+                            android:textColor="@color/accent_two"
+                            android:textSize="@dimen/text_size_12"
+                            android:textStyle="normal"
+                            tools:ignore="UnusedAttribute"
+                            tools:text="22:00" />
+
+                    </LinearLayout>
+
+                    <rm.com.audiowave.AudioWaveView
+                        android:id="@+id/visualizer"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/margin_60"
+                        android:layout_weight="1"
+                        app:animateExpansion="true"
+                        app:chunkHeight="24dp"
+                        app:chunkRadius="1dp"
+                        app:chunkSpacing="1dp"
+                        app:chunkWidth="4dp"
+                        app:minChunkHeight="3dp"
+                        app:waveColor="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/margin_60"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@id/txtEndTimeSound"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:letterSpacing="-0.03"
+                            android:lineSpacingExtra="@dimen/line_spacing_extra_9_8"
+                            android:textColor="@color/accent_two"
+                            android:textSize="@dimen/text_size_12"
+                            android:textStyle="normal"
+                            tools:ignore="UnusedAttribute"
+                            tools:text="22:00" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/margin_1"
+                    android:layout_height="@dimen/margin_8" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/rcAnswers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:nestedScrollingEnabled="false"
+                tools:ignore="UnusedAttribute" />
+
+            <View
+                android:layout_width="@dimen/margin_1"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_52"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@id/txtPreviewQuestionId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/margin_8"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra_7"
+                    android:paddingTop="@dimen/margin_8"
+                    android:paddingBottom="@dimen/margin_8"
+                    android:text="@string/previous_question"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_13"
+                    android:textStyle="normal"
+                    app:drawableStartCompat="@drawable/ic_back" />
+
+                <View
+                    android:layout_width="@dimen/margin_1"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@id/txtCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/margin_8"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra_7"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_13"
+                        android:textStyle="normal"
+                        tools:text="8" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/margin_8"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra_7"
+                        android:text="@string/slash"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_13"
+                        android:textStyle="normal" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@id/txtTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/margin_8"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/line_spacing_extra_7"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_18"
+                        android:textStyle="bold"
+                        tools:text="10" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/margin_1"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@id/txtNextQuestionId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/margin_8"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/line_spacing_extra_7"
+                    android:paddingTop="@dimen/margin_8"
+                    android:paddingBottom="@dimen/margin_8"
+                    android:text="@string/next_question"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_13"
+                    android:textStyle="normal"
+                    app:drawableEndCompat="@drawable/ic_next" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/lnNoResult"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_result"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+                android:textColor="@color/grey_40"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:gravity="center"
+                android:text="@string/there_is_no_information"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/grey_40" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:indicatorColor="@color/color_progress"
+                app:indicatorName="BallPulseIndicator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/please_wait"
+                android:textColor="@color/color_progress" />
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</androidx.core.widget.NestedScrollView>

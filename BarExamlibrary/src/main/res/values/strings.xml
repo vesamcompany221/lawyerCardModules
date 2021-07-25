@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">VakilTest</string>
+    <string name="no_connection">بدون ارتباط</string>
+    <string name="time_out">Time Out</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category">دسته بندی</string>
+    <string name="test_list">لیست آزمون ها</string>
+    <string name="question_list">لیست آزمون ها</string>
+    <string name="unit_money">تومان</string>
+    <string name="questions">سوال</string>
+    <string name="the_payment">پرداخت</string>
+    <string name="free">رایگان</string>
+    <string name="paid">پرداخت شده</string>
+    <string name="start_test">شروع آزمون</string>
+    <string name="no_result">بدون نتیجه</string>
+    <string name="there_is_no_information">هیچ اطلاعاتی وجود ندارد</string>
+    <string name="retest">ازمون مجدد</string>
+    <string name="the_result_of_the_last_test">نتیجه اخرین ازمون</string>
+    <string name="previous_question">سوال قبلی</string>
+    <string name="next_question">سوال بعدی</string>
+    <string name="download_all_file">دانلود کل فایل</string>
+    <string name="wallet">کیف پول</string>
+    <string name="online">پرداخت انلاین</string>
+    <string name="result">نتیجه</string>
+    <string name="retry">شروع مجدد</string>
+    <string name="returns">بازگشت</string>
+    <string name="no_permission">Please give the recording audio permission</string>
+    <string name="please_wait">لطفا منتظر بمانید</string>
+    <string name="slash">/</string>
+    <string name="accept_quiz">شما در این ازمون پذیرفته شده اید</string>
+    <string name="not_accept_quiz">شما در این ازمون پذیرفته نشده اید\nمیتوانید مجدد در آزمون شرکت کنید</string>
+    <string name="yes">بله</string>
+    <string name="no">نه</string>
+    <string name="do_you_exit">ایا میخواهید خارج شوید</string>
+    <string name="cancel">لغو</string>
+    <string name="accept">بلی</string>
+    <string name="exit_in_quiz">خروج از آزمون</string>
+</resources>

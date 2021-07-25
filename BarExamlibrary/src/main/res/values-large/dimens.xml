@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="header_slider">300dp</dimen>
+    <dimen name="margin_layout_height_text">247dp</dimen>
+    <dimen name="margin_top_text_quiz">101dp</dimen>
+    <dimen name="margin_bottom_text_quiz">110dp</dimen>
+    <dimen name="layout_width_image_quiz">248dp</dimen>
+    <dimen name="layout_width_video_quiz">248dp</dimen>
+    <dimen name="layout_height_image_quiz">124dp</dimen>
+    <dimen name="layout_height_video_quiz">124dp</dimen>
+</resources>
